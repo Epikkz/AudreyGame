@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.score-container {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 2px solid #333;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.game-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+#chaser {
+    background-color: red;
+}
+
+#player {
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#score-item {
+    background-color: gold;
+    display: none; /* Initially hidden */
+}
+
+/* D-Pad Styling */
+.dpad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.middle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:focus {
+    outline: none;
+    background-color: #aaa;
+}

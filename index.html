@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaser Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px; /* Padding at the top of the screen */
+            transition: backdrop-filter 0.5s;
+        }
+        #container {
+            position: relative;
+            width: 80vw; /* Width is set to 80% of viewport width */
+            height: 60vh; /* Height is set to 60% of viewport height */
+            border: 2px solid #000;
+            overflow: hidden;
+            margin: 0 auto; /* Center the container */
+        }
+        #player, #chaser, #score-item {
+            position: absolute;
+            width: 50px;  /* Set width for images */
+            height: 50px; /* Set height for images */
+            border: 2px;
+        }
+        #overlay {
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center">
+    <div id="overlay" class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+        <button id="startButton" class="bg-blue-500 text-white px-4 py-2 rounded-lg text-xl">Start Game</button>
+    </div>
+    <h1 class=" text-2xl font-mono">Game "Escape From Audrey"</h1>
+    <div id="container" class="relative w-4/5 h-3/5 border border-black">
+        <img id="player" src="assets/Epik.png" alt="Player" />
+        <img id="chaser" src="assets/audrey.jpg" alt="Chaser" />
+        <img id="score-item" src="assets/js.png" alt="Score Item" class="hidden" />
+    </div>
+
+    <div id="score" class="text-xl font-bold">Score: 0</div>
+    <script src="script.js"></script>
+    <p>Halooo :v,</p>
+        <p> Cara Main: Pake tombol panah←↑→↓ Di Keyboard</p>
+        <br>
+        <img src="assets/keyboard.png" class="w-32 h-35" alt="">
+</body>
+</html>
