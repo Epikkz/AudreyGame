@@ -10,6 +10,9 @@ let chaserSpeed = 1.5; // Chaser speed set to 0.3
 let playerSpeed = 25;
 let score = 0;
 
+// Create an audio object for the sound
+const scoreSound = new Audio('assets/ting.mp3'); // Replace with the actual path to your sound file
+
 // Function to start the game
 const startGame = () => {
     // Hide the overlay
@@ -109,6 +112,7 @@ const checkScoreItemCollision = () => {
         scoreItemRect.top + scoreItemRect.height > playerRect.top
     ) {
         increaseScore();
+        scoreSound.play(); // Play the sound when a score item is touched
         hideScoreItem();
     }
 };
